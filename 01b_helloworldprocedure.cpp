@@ -1,4 +1,4 @@
-// Print "Hello world" from variable
+// Print "Hello world" from procedure
 #include <iostream>
 
 void print_string(std::string input_string)
