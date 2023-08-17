@@ -33,13 +33,24 @@ void print_stats(const std::vector<int> input_object)
     print_vector(input_object);
 }
 
+std::vector<int> vectors_sum(std::vector<int> argument1, std::vector<int> argument2)
+{
+    std::vector<int> sum_vector;
+    for (int i=0; i < std::max(argument1.size(), argument2.size()); i++)
+    {
+        sum_vector.push_back(argument1[i] + argument2[i]);
+    }
+    return sum_vector;
+}
+
+
 int main()
 {
     const int vector_size = 10;
     std::vector<int> input1(vector_size, 42);
     std::vector<int> input2(vector_size, 53);
 
-    for (int i=0; i< std::max(input1.size(), input2.size()); i++){
+    for (int i=0; i < std::max(input1.size(), input2.size()); i++){
         if (i%2 == 0)
         {
             input1[i] += i;
@@ -51,6 +62,7 @@ int main()
     }
     print_vector(input1);
     print_vector(input2);
+    print_vector(vectors_sum(input1, input2));
 
     return 0;
 }
