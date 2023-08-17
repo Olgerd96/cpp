@@ -10,11 +10,10 @@
 void print_vector(const std::vector<int> input_vector) {
   if (input_vector.size() > 0) {
     std::cout << "{";
-    for (size_t i = 0; (i < input_vector.size() && i < 15); i++) {
+    for (size_t i = 0; (i < input_vector.size() && i < 25); i++) {
       std::cout << input_vector[i] << ", ";
     }
-    std::cout << "}" << std::endl;
-    std::cout << "------------------------" << std::endl;
+    std::cout << "}\n---------------------------------------------" << std::endl;
   }
 }
 
@@ -40,6 +39,7 @@ std::vector<int> vectors_sum(std::vector<int> argument1,
   for (size_t i = 0; i < std::max(argument1.size(), argument2.size()); i++) {
     sum_vector.push_back(argument1[i] + argument2[i]);
   }
+
   return sum_vector;
 }
 
