@@ -35,13 +35,24 @@ void print_stats(const std::vector<int> input_object)
 
 int main()
 {
-    std::vector<int> input1(16, 42);
+    const int vector_size = 10;
+    std::vector<int> input1(vector_size, 42);
+    std::vector<int> input2(vector_size, 53);
 
-    print_stats(input1);
-    input1[2] = 5;
+    for (int i=0; i< std::max(input1.size(), input2.size()); i++){
+        if (i%2 == 0)
+        {
+            input1[i] += i;
+        }
+        else
+        {
+            input2[i] -= i;
+        }
+    }
     print_vector(input1);
-    input1.push_back(99);
-    print_vector(input1);
+    print_vector(input2);
+    
+
 
     return 0;
 }
