@@ -51,8 +51,6 @@ int main()
     }
     print_vector(input1);
     print_vector(input2);
-    
-
 
     return 0;
 }
