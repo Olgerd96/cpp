@@ -1,9 +1,10 @@
-// Print "Hello world"
+// Print "Hello world" from variable
 #include <iostream>
 
 int main()
 {
-	std::cout << "Hello world!\n";
-	
-	return 0;
+    std::string message = "Hello world v0.1a !";
+    std::cout << message << std::endl;
+
+    return 0;
 }
