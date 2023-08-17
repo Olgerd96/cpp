@@ -1,11 +1,11 @@
-// Print "Hello world" stats
 #include <cstring>
 #include <iostream>
 // #include <string> 
 #include <typeinfo>
 #include <vector>
 
-#include "shssf_vector_tools.hpp"
+// predefined function from vector to ostream
+// #include "shssf_vector_tools.hpp"
 
 void print_stats(const std::vector<int> input_object)
 {
