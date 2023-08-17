@@ -1,10 +1,10 @@
-// Print "Hello world" stats
+// Print strings stats
 #include <cstring>
 #include <iostream>
 #include <string> 
 #include <typeinfo>
 
-void print_stats(std::string input_object)
+void print_stats(const std::string &input_object)
 {
     std::cout << "Object size:\t" << sizeof(input_object) << " bytes"
             << "\nObject strlen:\t" << strlen(input_object.c_str()) << " chars"
