@@ -12,11 +12,12 @@ void print_vector(const std::vector<int> input_vector)
     if (input_vector.size() > 0)
     {
         std::cout << "{";
-        for (auto cur_element : input_vector)
+        for(size_t i=0; i < input_vector.size(); i++)
         {
-            std::cout << cur_element << ", ";
+            std::cout << input_vector[i] << ", ";
         }
-        std::cout << "\b\b}";    // \b remove ", " separator
+        std::cout << "}" << std::endl;
+        std::cout << "------------------------" << std::endl;
     }
 }
 
@@ -26,10 +27,10 @@ void print_stats(const std::vector<int> input_object)
         // << "\nObject strlen:\t" << strlen(input_object.c_str()) << " chars"
         << "\nObj.size() prop:\t" << input_object.size() << " elements"
         // << "\nObj.lengh() prop:\t" << input_object.length() << " chars"
-        << "\nObject type:\t" << typeid(input_object).name() << "  \t// get readeble name using: c++filt -t " << typeid(input_object).name()
+        << "\nObject type:\t" << typeid(input_object).name()
+        // << "\t// get readeble name using: c++filt -t " << typeid(input_object).name()
         << "\nObject value:\t";
     print_vector(input_object);
-    std::cout << std::endl;
 }
 
 int main()
