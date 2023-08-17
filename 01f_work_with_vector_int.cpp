@@ -1,4 +1,4 @@
-#include <cstring>
+// #include <cstring>
 #include <iostream>
 // #include <string> 
 #include <typeinfo>
@@ -34,12 +34,13 @@ void print_stats(const std::vector<int> input_object)
 
 int main()
 {
-    std::vector<int> example = {127};
-    print_stats(example);
-    std::cout << "------------------------" << std::endl;
-    print_stats(std::vector<int> {32767});
-    std::cout << "------------------------" << std::endl;
-    print_stats(std::vector<int> {123, 234, 345});
+    std::vector<int> input1(16, 42);
+
+    print_stats(input1);
+    input1[2] = 5;
+    print_vector(input1);
+    input1.push_back(99);
+    print_vector(input1);
 
     return 0;
 }
