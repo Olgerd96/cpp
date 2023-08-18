@@ -1,3 +1,4 @@
+#include <chrono>
 #include <iostream>
 #include <typeinfo>
 #include <vector>
@@ -39,7 +40,7 @@ std::vector<int> vectors_sum(std::vector<int> argument1,
 }
 
 int main() {
-  const int vector_size = 268435456;
+  const int vector_size = 100663296;
   std::vector<int> input1(vector_size, 42);
   std::vector<int> input2(vector_size, 54);
   std::vector<int> result;
@@ -53,7 +54,11 @@ int main() {
   }
   print_vector(input1);
   print_vector(input2);
+  std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
   result = vectors_sum(input1, input2);
+  std::chrono::steady_clock::time_point stop = std::chrono::steady_clock::now();
+  std::chrono::microseconds::rep item = std::chrono::duration_cast<std::chrono::microseconds>(stop - start).count();
+  std::cout << "Perf. time: \t" << item << std::endl;
   print_vector(result);
 
   return 0;
