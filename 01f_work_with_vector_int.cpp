@@ -46,10 +46,10 @@ std::vector<int> vectors_sum(std::vector<int> argument1,
 int main() {
   const int vector_size = 268435456;
   std::vector<int> input1(vector_size, 42);
-  std::vector<int> input2(vector_size, 53);
+  std::vector<int> input2(vector_size, 54);
   std::vector<int> input_sum;
 
-  for (int i = 0; i < std::max(input1.size(), input2.size()); i++) {
+  for (size_t i = 0; i < std::max(input1.size(), input2.size()) && i < 20; i++) {
     if (i % 2 == 0) {
       input1[i] += i;
     } else {
