@@ -44,7 +44,7 @@ int main() {
   std::vector<int> input2(vector_size, 54);
   std::vector<int> result;
 
-  for (size_t i = 0; i < std::max(input1.size(), input2.size()) && i < 20; i++) {
+  for (size_t i = 0; (i < std::max(input1.size(), input2.size())) && (i < 20); i++) {
     if (i % 2 == 0) {
       input1[i] += i;
     } else {
