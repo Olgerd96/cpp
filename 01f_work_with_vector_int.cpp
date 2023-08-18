@@ -1,17 +1,12 @@
-// #include <cstring>
 #include <iostream>
-// #include <string>
 #include <typeinfo>
 #include <vector>
-
-// predefined function from vector to ostream
-// #include "shssf_vector_tools.hpp"
 
 void print_vector(const std::vector<int> input_vector) {
   if (input_vector.size() > 0) {
     std::cout << "{";
     for (size_t i = 0; (i < input_vector.size() && i < 25); i++) {
-      std::cout << input_vector[i] << ", ";
+      std::cout << input_vector[i] << "  ";
     }
     std::cout << "}\n---------------------------------------------" << std::endl;
   }
@@ -47,7 +42,7 @@ int main() {
   const int vector_size = 268435456;
   std::vector<int> input1(vector_size, 42);
   std::vector<int> input2(vector_size, 54);
-  std::vector<int> input_sum;
+  std::vector<int> result;
 
   for (size_t i = 0; i < std::max(input1.size(), input2.size()) && i < 20; i++) {
     if (i % 2 == 0) {
@@ -58,8 +53,8 @@ int main() {
   }
   print_vector(input1);
   print_vector(input2);
-  input_sum = vectors_sum(input1, input2);
-  print_vector(input_sum);
+  result = vectors_sum(input1, input2);
+  print_vector(result);
 
   return 0;
 }
