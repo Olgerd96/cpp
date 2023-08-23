@@ -2,6 +2,8 @@
 #include <iostream>  	// std::cout
 #include <vector> 	// std::vector<int>
 
+#include "utils.hpp"
+
 void print_vector(const std::vector<int> input_object) {
   if (input_object.size() > 0) {
     const unsigned long few_examples = 25;
